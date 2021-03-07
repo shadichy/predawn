@@ -1,8 +1,5 @@
-**NEW: Predawn Shell**  
-Does your command line need some love. [Check out the predawn-shell repo](https://github.com/jamiewilson/predawn-shell) for an [iTerm](http://iterm2.com/), Terminal (special thanks to [@danielbayley](https://github.com/danielbayley), and a [Oh-My-ZSH](http://ohmyz.sh/) prompt theme.
-
-![predawn-shell-iterm](http://i.imgur.com/YxtbMts.png)
-
+**Update**
+added icon fixes for sublime text 3
 # Predawn
 
 ### A dark interface and syntax theme for [Sublime Text](https://sublime.wbond.net/packages/Predawn) and [Atom](https://atom.io/packages/predawn-ui).
