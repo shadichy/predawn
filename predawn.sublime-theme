@@ -9,7 +9,7 @@
     "tab_overlap": 1,
     "tab_width": 260,
     "tab_min_width": 100,
-    "tab_height": 58,
+    "tab_height": 32,
     "mouse_wheel_switch": false
   },
   {
@@ -20,7 +20,7 @@
   {
     "class": "tabset_control",
     "settings": ["predawn_tabs_small"],
-    "tab_height": 30
+    "tab_height": 32
   },
   {
     "class": "tabset_control",
@@ -39,7 +39,7 @@
     "layer0.opacity": 1.0,
 
     // Active Tab
-    "layer1.texture": "Predawn/assets/tab-active.png",
+    "layer1.texture": "Predawn/assets/tab-active-underline.png",
     "layer1.inner_margin": [20, 4],
     "layer1.opacity": 0,
 
@@ -360,93 +360,7 @@
     "class": "status_button",
     "min_size": [100, 0]
   },
-  {
-    // Sidebar container
-    "class": "sidebar_container",
-    "layer0.tint": [51, 51, 51],
-    "layer0.opacity": 1.0,
-    "layer0.draw_center": false,
-    "layer0.inner_margin": 0,
-    "content_margin": [0, 0, 0, 0]
-  },
-  {
-    // Sidebar rows
-    "class": "tree_row",
-    "layer0.texture": "Predawn/assets/sidebar-row-selected.png",
-    "layer0.opacity": 0
-  },
-  {
-    // Sidebar row selected
-    "class": "tree_row",
-    "attributes": ["selected"],
-    "layer0.opacity": 1.0
-  },
-  {
-    // Sidebar heading
-    "class": "sidebar_heading",
-    "color": [120, 120, 120],
-    "font.bold": true
-  },
-  {
-    // Sidebar entry
-    "class": "sidebar_label",
-    "color": [140, 140, 140]
-  },
-  {
-    // Sidebar folder entry
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
-    "color": [210, 210, 210]
-  },
-  {
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": [ "hover"]}],
-    "color": [240, 240, 240]
-  },
-  {
-    // Sidebar entry selected
-    "class": "sidebar_label",
-    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-    "color": [240, 240, 240]
-  },
-  {
-    // Sidebar entry transient
-    "class": "sidebar_label",
-    "attributes": ["transient"],
-    "font.italic": true
-  },
-  {
-    // Sidebar file close
-    "class": "close_button",
-    "layer0.texture": "Predawn/assets/file-close.png",
-    "layer0.opacity": 0.25,
-    "layer1.texture": "Predawn/assets/file-dirty.png",
-    "layer1.opacity": 0,
-    "content_margin": [8, 8]
-  },
-  {
-    "class": "close_button",
-    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-    "layer0.opacity": 0.5
-  },
-  {
-    "class": "close_button",
-    "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
-    "layer0.opacity": 0.25
-  },
-  {
-    // Sidebar file dirty
-    "class": "close_button",
-    "attributes": ["dirty"],
-    "layer1.opacity": 1.0
-  },
-  {
-    // Sidebar file close hover
-    "class": "close_button",
-    "attributes": ["hover"],
-    "layer0.opacity": 1.0,
-    "layer1.opacity": 0
-  },
+  
   {
     // Standard buttons (used for Find/Replace panel)
     "class": "button_control",
@@ -804,38 +718,18 @@
     "parents": [{"class": "icon_button_control", "attributes": ["selected"]}],
     "layer0.texture": "Predawn/assets/icon-highlight-on.png"
   },
-
-  //
-  //
-  // ST2 Sidebar Folder Icons
-  //
-  //
   {
-    // Default Theme Icons
-    "class": "disclosure_button_control",
-    "layer0.texture": "Theme - Default/arrow_right.png",
-    "layer0.opacity": 1.0,
-    "layer0.inner_margin": 0,
-    "layer1.texture": "Theme - Default/arrow_right_over.png",
-    "layer1.opacity": 0.0,
-    "layer1.inner_margin": 0,
-    "content_margin": [9, 7, 8, 6]
+    "class": "icon_folder",
+    "layer0.texture": "Predawn/assets/folder.png",
+    "layer0.opacity": 1,
+    "content_margin": [9, 8]
   },
   {
-    "class": "disclosure_button_control",
-    "parents":
-    [
-        { "class": "tree_row", "attributes": ["hover"] }
-    ],
-    // "attributes": ["hover"],
-    "layer0.opacity": 0.0,
-    "layer1.opacity": 1.0
-  },
-  {
-    "class": "disclosure_button_control",
-    "attributes": ["expanded"],
-    "layer0.texture": "Theme - Default/arrow_down.png",
-    "layer1.texture": "Theme - Default/arrow_down_over.png"
+    "class": "icon_folder",
+    "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+    "layer0.texture": "Predawn/assets/folder-open.png",
+    "layer0.opacity": 1,
+    "content_margin": [9, 8]
   },
   {
     // Sidebar tree
@@ -906,5 +800,108 @@
     "attributes": ["expanded"],
     "layer0.texture": "Predawn/assets/expanded_icon.png",
     "layer1.texture": "Predawn/assets/expanded_icon_over.png"
-  }
+  },
+  {
+    // Sidebar container
+    "class": "sidebar_container",
+    "layer0.tint": [51, 51, 51],
+    "layer0.opacity": 1.0,
+    "layer0.draw_center": false,
+    "layer0.inner_margin": 0,
+    "content_margin": [0, 0, 0, 0]
+  },
+  {
+    // Sidebar rows
+    "class": "tree_row",
+    "layer0.texture": "Predawn/assets/sidebar-row-selected.png",
+    "layer0.opacity": 0
+  },
+  {
+    // Sidebar row selected
+    "class": "tree_row",
+    "attributes": ["selected"],
+    "layer0.opacity": 1.0
+  },
+  {
+    // Sidebar heading
+    "class": "sidebar_heading",
+    "color": [120, 120, 120],
+    "font.bold": true
+  },
+  {
+    // Sidebar entry
+    "class": "sidebar_label",
+    "color": [140, 140, 140]
+  },
+  {
+    // Sidebar folder entry
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+    "color": [210, 210, 210]
+  },
+  {
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": [ "hover"]}],
+    "color": [240, 240, 240]
+  },
+  {
+    // Sidebar entry selected
+    "class": "sidebar_label",
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "color": [240, 240, 240]
+  },
+  {
+    // Sidebar entry transient
+    "class": "sidebar_label",
+    "attributes": ["transient"],
+    "font.italic": true
+  },
+  {
+    // Sidebar file close
+    "class": "close_button",
+    "layer0.texture": "Predawn/assets/file-close.png",
+    "layer0.opacity": 0.25,
+    "layer1.texture": "Predawn/assets/file-dirty.png",
+    "layer1.opacity": 0,
+    "content_margin": [8, 8]
+  },
+  {
+    "class": "close_button",
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "layer0.opacity": 0.5
+  },
+  {
+    "class": "close_button",
+    "parents": [{"class": "tree_row", "attributes": ["hover", "selected"]}],
+    "layer0.opacity": 0.25
+  },
+  {
+    // Sidebar file dirty
+    "class": "close_button",
+    "attributes": ["dirty"],
+    "layer1.opacity": 1.0
+  },
+  {
+    // Sidebar file close hover
+    "class": "close_button",
+    "attributes": ["hover"],
+    "layer0.opacity": 1.0,
+    "layer1.opacity": 0
+  },
+  {
+      "class": "disclosure_button_control",
+      "layer0.texture": "Predawn/assets/collapsed_icon_over.png",
+      "layer0.opacity": 1.0,
+      "content_margin": [8, 8]
+  },
+  {
+      "class": "disclosure_button_control",
+      "attributes": ["expanded"],
+      "layer0.texture": "Predawn/assets/expanded_icon.png",
+  },
+  {
+      "class": "disclosure_button_control",
+      "attributes": ["hover"],
+      "layer0.opacity": 0.5,
+  },
 ]
